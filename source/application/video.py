@@ -38,6 +38,5 @@ class Video:
 
     @staticmethod
     def get_video_items(data: Namespace) -> list:
-        h264 = data.safe_extract("video.media.stream.h264")
         h265 = data.safe_extract("video.media.stream.h265")
-        return [*h265, *h264]
+        return [*h265]
